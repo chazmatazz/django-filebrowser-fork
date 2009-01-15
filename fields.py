@@ -72,6 +72,7 @@ class FileBrowseWidget(Input):
             value = ''
         elif not isinstance(value, (str, unicode)):
             value = value.original
+
         final_attrs = self.build_attrs(attrs, type=self.input_type, name=name)
         init = final_attrs['initial_directory']
         final_attrs['initial_directory'] = _url_join(URL_ADMIN, init)
